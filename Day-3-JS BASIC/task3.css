@@ -1,0 +1,307 @@
+/* body{
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(task\ 3.png);
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0e1a;
+    color: white;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #ff6600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: #ff6600;
+}
+
+.search-bar {
+    display: flex;
+    gap: 5px;
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    border: none;
+    background-color: #1a1f30;
+    color: white;
+    font-size: 13px;
+    outline: none;
+    width: 160px;
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+    min-height: calc(100vh - 60px);
+    background: linear-gradient(to bottom, #0a0e1a, #0d1525, #1a0a00);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(1px 1px at 10% 15%, white, transparent),
+        radial-gradient(1px 1px at 25% 8%, white, transparent),
+        radial-gradient(1px 1px at 40% 20%, white, transparent),
+        radial-gradient(1px 1px at 60% 5%, white, transparent),
+        radial-gradient(1px 1px at 75% 18%, white, transparent),
+        radial-gradient(1px 1px at 85% 12%, white, transparent),
+        radial-gradient(1px 1px at 95% 25%, white, transparent),
+        radial-gradient(1px 1px at 5% 35%, white, transparent),
+        radial-gradient(1px 1px at 15% 45%, white, transparent),
+        radial-gradient(1px 1px at 50% 30%, white, transparent),
+        radial-gradient(1px 1px at 70% 40%, white, transparent),
+        radial-gradient(1px 1px at 90% 35%, white, transparent),
+        radial-gradient(1px 1px at 30% 50%, white, transparent),
+        radial-gradient(1px 1px at 80% 55%, white, transparent);
+    pointer-events: none;
+}
+
+.hero-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 400px;
+    height: 80%;
+    background: radial-gradient(ellipse at center bottom, #8b3a00 0%, #3a1800 30%, transparent 70%);
+}
+
+.tree {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+    width: 0;
+    height: 0;
+}
+
+.tree-trunk {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 80px;
+    background-color: #5a2000;
+}
+
+.tree-top {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 250px;
+    background: radial-gradient(ellipse, #8b4500 0%, #5a2800 50%, #2a1000 100%);
+    border-radius: 50% 50% 30% 30%;
+}
+
+.reflection {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 400px;
+    height: 80px;
+    background: linear-gradient(to bottom, #3a1500, #1a0800, transparent);
+    opacity: 0.6;
+}
+
+/* LEFT CONTENT */
+.hero-left {
+    max-width: 450px;
+    position: relative;
+    z-index: 5;
+}
+
+.hero-left h1 {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-left h1 span {
+    color: #ff6600;
+}
+
+.hero-left p {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    max-width: 380px;
+}
+
+.btn-join {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.btn-join:hover {
+    background-color: #e55a00;
+}
+
+/* LOGIN CARD */
+.login-card {
+    background-color: #0d1525;
+    border: 1px solid #1e2a40;
+    padding: 30px;
+    width: 280px;
+    position: relative;
+    z-index: 5;
+}
+
+.login-card h3 {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ff6600;
+    color: #ff6600;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #444;
+    color: #aaa;
+    font-size: 13px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.login-card input::placeholder {
+    color: #666;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-login:hover {
+    background-color: #e55a00;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+}
+
+.login-footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.social-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #1a2035;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.social-icons a:hover {
+    background-color: #ff6600;
+}
