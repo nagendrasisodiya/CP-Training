@@ -3,6 +3,7 @@ import {test, expect} from "@playwright/test"
 //setting timeout for this particular file global setting
 // test.use({actionTimeout:8000})
 
+
 test("assertion-1", async({page})=>{
     await page.goto("https://practicetestautomation.com/practice-test-login/")
     await page.getByLabel("Username", {exact:true}).fill("student123")
@@ -16,7 +17,7 @@ test("assertion-1", async({page})=>{
 })
 
 test.only("assertion-2",  async({page})=>{
-    //setting up timeout for this test b;ock
+    //setting up timeout for this test block
     // await page.setDefaultTimeout(1000)
 
     await page.goto("https://practicetestautomation.com/practice-test-login/")
