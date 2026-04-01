@@ -1,5 +1,7 @@
+import {Locator} from "@playwright/test";
+
 class amazon{
-    searchField:string
+    searchField:Locator
     searchBTN:any
     checkBOX:any
     product:any
@@ -18,7 +20,7 @@ class amazon{
         this.quantity = page.locator('//div[@class="a-popover-inner"]/descendant::ul/li/a[@id="quantity_2"]')
         this.add=page.locator('(//input[@id="add-to-cart-button"])[2]')
     }
-    async addToCart( product:string){
+    async addToCart(product:string){
         await this.searchField.fill(product)
         await this.searchBTN.click()
         await this.page.waitForTimeout(2000)

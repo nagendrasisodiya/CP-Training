@@ -1,6 +1,6 @@
 import {test} from "@playwright/test";
-import sample from "../../Project Object Model(POM)/sample.page";
-import amazon from "../../Project Object Model(POM)/Day-20.page";
+import sample from "../../page Object Model(POM)/sample.page";
+import amazon from "../../page Object Model(POM)/Day-20.page";
 
 test("fun-in-pom", async ({page})=>{
     let sample_page=new sample(page)

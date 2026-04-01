@@ -1,5 +1,5 @@
 import {test} from "@playwright/test";
-import sample from "../../Project Object Model(POM)/sample.page";
+import sample from "../../page Object Model(POM)/sample.page";
 import * as fs from "node:fs";
 import path = require("node:path");
 
