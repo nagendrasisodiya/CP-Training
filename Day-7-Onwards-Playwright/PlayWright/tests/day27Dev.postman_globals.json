@@ -1,0 +1,15 @@
+{
+  "id": "c6da99d8-9b4c-4370-8a5a-4bf217ce239d",
+  "values": [
+    {
+      "key": "BaseUrl",
+      "value": "",
+      "type": "any",
+      "enabled": true
+    }
+  ],
+  "name": "Web Dev Globals",
+  "_postman_variable_scope": "globals",
+  "_postman_exported_at": "2026-04-03T05:16:13.066Z",
+  "_postman_exported_using": "Postman/12.4.3"
+}

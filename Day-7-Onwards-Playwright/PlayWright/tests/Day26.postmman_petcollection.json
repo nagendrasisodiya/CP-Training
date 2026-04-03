@@ -1,0 +1,236 @@
+{
+  "info": {
+    "_postman_id": "49b797b0-fdc4-4ca3-a78a-26c97e25140c",
+    "name": "Day26",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42927846",
+    "_collection_link": "https://go.postman.co/collection/42927846-49b797b0-fdc4-4ca3-a78a-26c97e25140c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Put Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.globals.set(\"BaseUrl\", \"https://petstore3.swagger.io/api/v3\");\r",
+              "\r",
+              "pm.test(\"Your test name\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.value).to.eql(100);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\" : {{petId}},\r\n    \"name\" : \"Ashleel Rapper\",\r\n    \"photoUrls\" : [{{img}}]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseUrl}}/pet",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "pet"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Requet",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.collectionVariables.set(\"img\", \"https://www.countryliving.com/life/kids-pets/g3283/the-50-most-popular-dog-breeds/\");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":{{petId}},\r\n    \"name\":\"moose\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseUrl}}/pet",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "pet"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Response time is less than 500ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Your test name\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.id).to.eql(1);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}/pet/1",
+          "host": [
+            "{{BaseUrl}}"
+          ],
+          "path": [
+            "pet",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://encrypted-tbn0.gstatic.com/images",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOEcVzCzVfmw-LsD6YvybyA7pHvHqKjz2urnn4Rtxo-z6kt2PCI34opCcIVtMOsuq1fpjdPVmCEUQ8b4JSdyflwg7mDdLWJ_wewnhDC2Sx&s=10",
+          "protocol": "https",
+          "host": [
+            "encrypted-tbn0",
+            "gstatic",
+            "com"
+          ],
+          "path": [
+            "images"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "tbn:ANd9GcQOEcVzCzVfmw-LsD6YvybyA7pHvHqKjz2urnn4Rtxo-z6kt2PCI34opCcIVtMOsuq1fpjdPVmCEUQ8b4JSdyflwg7mDdLWJ_wewnhDC2Sx"
+            },
+            {
+              "key": "s",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://encrypted-tbn0.gstatic.com/images",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJCJAUXxSDQ-91g0SS2XOwtvCVOrNlXRMK7PbOmPpzsUj_mCh_Q-XSsaj_ifDDfZxqp4h2I15mE4LsjVLJ2ddDHnc2H8HL9Dfxa7Dta8Q6d2bcEI7n8anludSiaQlmZ6E8qmcX1w&s=10&ec=121584926",
+          "protocol": "https",
+          "host": [
+            "encrypted-tbn0",
+            "gstatic",
+            "com"
+          ],
+          "path": [
+            "images"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "tbn:ANd9GcRJCJAUXxSDQ-91g0SS2XOwtvCVOrNlXRMK7PbOmPpzsUj_mCh_Q-XSsaj_ifDDfZxqp4h2I15mE4LsjVLJ2ddDHnc2H8HL9Dfxa7Dta8Q6d2bcEI7n8anludSiaQlmZ6E8qmcX1w"
+            },
+            {
+              "key": "s",
+              "value": "10"
+            },
+            {
+              "key": "ec",
+              "value": "121584926"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "petId",
+      "value": ""
+    },
+    {
+      "key": "img",
+      "value": ""
+    }
+  ]
+}
